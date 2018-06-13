@@ -1,0 +1,19 @@
+
+// Move encoding:
+/// Bits 1-7 = move from index
+/// Bits 8-14 = move to index
+/// Bits 15,16 = promotion piece index (queen = 0, rook = 1, knight = 2, bishop = 3)
+
+// Game state
+/// Bit 1 = colour to move (white = 1; black = 0)
+/// Bit 2,3,4,5 = castling rights (white kingside, white queenside; black kingside, black queenside)
+/// Bit 6,7,8,9 = one-based en passant file (0 = no ep square, files are from 1 to 8)
+/// Bit 10,11,12,13 = piece code of last captured piece
+/// Bit 14 = move was ep capture (not implemented)
+/// Bit 15 = move was promotion (not implemented)
+/// Bit 16 = move was castles (not implemented)
+
+// Known issues:
+/// notation does not handle cases where both file and rank must be specified in order for move not to be ambiguous. For example in the following position:
+/// rnb1kbnr/pppppppp/qqR5/q1q2NR1/qqR5/3P1N2/PPP1PPPP/1NBQKB1R w KQkq -
+/// for the a6 queen to move to b5, the notation must be Qa6b5
