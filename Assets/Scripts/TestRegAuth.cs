@@ -103,7 +103,8 @@ public class TestRegAuth : MonoBehaviour {
 
 
     void OnChallengeTurnTaken(GameSparks.Api.Messages.ChallengeTurnTakenMessage message) {
-
+        Debug.Log("On Turn changed");
+        // message.Challenge.
     }
 
 }
