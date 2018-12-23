@@ -17,10 +17,10 @@ TagManager:
   - 
   - PostProcessing
   - Piece
-  - 
-  - 
-  - 
-  - 
+  - AuthenticatedObjects
+  - InGameGroundMultiplayer
+  - AIPiece
+  - TestPiece
   - 
   - 
   - 
